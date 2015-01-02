@@ -1,0 +1,73 @@
+﻿#parameterMenu
+{
+	top:5px;
+}
+
+
+#treeContainer
+{
+	position: absolute;
+	left:0%;
+	top:0px;
+	background-color: #000000;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+#growButton
+{
+    /* margin-left:100px;     */
+    float:left;    
+}
+#clearButton
+{
+    float:right;    
+}
+
+
+
+#transformation1A, #transformation2A
+{
+    float:left;    
+}
+
+
+#transformation1B, #transformation2B
+{
+    float:right;    
+}
+
+#transformations1Div, #transformations2Div
+{
+    height:30px;   
+}
+
+.optionTextInput
+{
+    width:90px;        
+}
+
+#transformationsOptionsDiv
+{
+    height:150px; 
+    background-color:#FFFFFF;
+    z-index:3;       
+}
+
+.description
+{
+    font-size:11px;    
+}
+
+#presetsContainer
+{
+	margin-bottom:0px;
+}
+
+#presetSelection
+{
+	float:right;
+}
+
+
+

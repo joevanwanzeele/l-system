@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>L-System</title>
+    <link href="css/particleWorld.css" rel="stylesheet" type="text/css" />
+    <link href="css/trees.css" rel="stylesheet" type="text/css" />
+    <script src="script/prototype-1.6.0.3.js" language="javascript" type="text/javascript"></script>
+    <script src="script/tree.js" language="javascript" type="text/javascript"></script>    
+</head>
+<body>
+    <canvas id="treeContainer" width="1700" height="1000" onclick="setXY(event)">
+    </canvas>
+    <div id="parameterMenu">
+        <div class="optionsTitle">
+            Parameters</div>
+        <div class="description">
+            Enter your parameters and click "Go!"<br />
+            The following characters are valid for words:<br />
+            <b>F</b> = Draw a line in current direction<br />
+            <b>X</b> = Placeholder to be replaced by right side of transformation<br />
+            <b>+</b> = turn right at specified angle<br />
+            <b>-</b> = turn left at specified angle<br />
+            <b>[</b> = begin branch<br />
+            <b>]</b> = end branch<br />
+            <br />
+            <br />
+        </div>
+        <div class="optionsSectionDiv">
+            <div class="optionsSectionTitle">
+                Initial Values</div>
+            <div class="options">
+                <div class="optionName">
+                    Start X</div>
+                <input type="text" id="startStateX" class="optionTextInput" /></div>
+            <div class="options">
+                <div class="optionName">
+                    Start Y</div>
+                <input type="text" id="startStateY" class="optionTextInput" /></div>
+            <div class="options">
+                <div class="optionName">
+                    Start Angle</div>
+                <input type="text" id="startStateAngle" class="optionTextInput" /></div>
+            <div class="options">
+                <div class="optionName">
+                    Start Word</div>
+                <input type="text" id="startWord" class="optionTextInput" /></div>
+            <div class="options">
+                <input type="checkbox" id="showGeneratedWord" />
+                show generated word</div>
+        </div>
+        <div class="optionsSectionDiv" id="transformationsOptionsDiv">
+            <div class="optionsSectionTitle">
+                Transformation</div>
+            <div class="options" id="transformations1Div">
+                <input type="text" id="transformation1A" class="optionTextInput" /><div class="optionName">
+                    --></div>
+                <input type="text" id="transformation1B" class="optionTextInput" />
+            </div>
+            <div class="options" id="transformations2Div">
+                <input type="text" id="transformation2A" class="optionTextInput" /><div class="optionName">
+                    --></div>
+                <input type="text" id="transformation2B" class="optionTextInput" />
+            </div>
+            <div class="options" id="iterationsContainer">
+                <div class="optionName">
+                    Iterations</div>
+                <input type="text" id="numberOfIterations" class="optionTextInput" />
+            </div>
+        </div>
+        
+		<div id="presetsDiv" class="optionsSectionDiv">
+			<div class="options" id="presetsContainer">
+				<div class="optionName">Presets</div>
+				<select id="presetSelection" onChange="loadPreset()"></select>
+			</div>
+		</div>
+		<input id="growButton" type="submit" value="Go!" onclick="growTree()" /><input id="clearButton" type="submit" value="Clear Screen" onclick="clearScreen()" />
+		
+		
+    </div>
+</body>
+</html>
